@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hogemu32-lang.github.io/myfans_x/sitemap.xml

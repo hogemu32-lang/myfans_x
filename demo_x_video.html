@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>X動画 埋め込みデモ（壁打ち用）</title>
+<meta name="referrer" content="no-referrer">
+<style>
+body{font-family:system-ui,sans-serif;background:#1a1a1f;color:#eee;padding:24px;line-height:1.8}
+.wrap{max-width:520px;margin:0 auto}
+video{width:100%;border-radius:12px;background:#000}
+.card{background:#26262e;border:1px solid #3a3a46;border-radius:14px;padding:16px;margin:10px 0}
+.note{color:#9b9bb0;font-size:12px}
+code{background:#000;color:#7ee787;padding:2px 6px;border-radius:6px;font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h2>X投稿動画 埋め込みデモ</h2>
+  <p class="note">@misa_355 の投稿（2025-09-10）「おはみさ〜 朝からこれされたい人いる？」 ／ 720x1280・11.9秒・1.4MB</p>
+  <video controls preload="metadata" playsinline
+         poster="https://pbs.twimg.com/amplify_video_thumb/1965572114993610756/img/3R15VJ1tbkrilABd.jpg"
+         referrerpolicy="no-referrer" crossorigin="anonymous">
+    <source src="https://video.twimg.com/amplify_video/1965572114993610756/vid/avc1/720x1280/fsLOOovK7uhhRl0Z.mp4" type="video/mp4">
+  </video>
+  <p class="note">▼ 自己ホスト版（demo_misa.mp4 をサイトに置いた場合）</p>
+  <video controls preload="metadata" playsinline src="demo_misa.mp4"></video>
+  <div class="card">
+    <p><b>ソースURL:</b><br><code>https://video.twimg.com/amplify_video/1965572114993610756/vid/avc1/720x1280/fsLOOovK7uhhRl0Z.mp4</code></p>
+    <p><b>実証済み条件:</b><br>・Referer なし → 200 OK / video/mp4（1,431,603 bytes）<br>・Referer 付き → 403（X側のホットリンク対策）<br>・<code>referrerpolicy="no-referrer"</code> を video（or meta referrer）に付ければ再生可<br>・CORS ヘッダ <code>access-control-allow-origin: *</code></p>
+    <p class="note">※ ホットリンクはtwimg側で消える可能性あり。長期運用は1.4MBをダウンロードして自前配信が安定。</p>
+  </div>
+</div>
+</body>
+</html>
